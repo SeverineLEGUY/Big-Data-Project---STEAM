@@ -41,34 +41,16 @@ This project has two main goals:
   
 ---
 
-## 🔍 Summary of the Approach
+## 🔍 Approach
 
-The project was carried out in the following steps:
-
-1. **Data Loading**
-   - Connection to the S3 bucket and reading of the JSON file using PySpark.
-   - Analysis of the semi-structured schema, including nested fields.
-
-2. **Cleaning & Preparation**
-   - Use of `explode()` to flatten complex, nested columns.
-   - Selection and transformation of relevant columns (dates, text, prices, reviews, etc.).
-   - Handling of null values and duplicates.
-
-3. **Creation of Specific DataFrames**
-   - Splitting the main dataset into logical subgroups:
-     - Publisher data  
-     - Genre data  
-     - Platform data  
-     - Pricing and review data  
-
-4. **Exploratory Data Analysis (EDA)**
+1. **Exploratory Data Analysis (EDA)**
    - Use of Spark functions such as `groupBy`, `agg`, `withColumn`, etc.
    - Visualizations created in Databricks to:
      - Explore trends (by year, price, genre, etc.)
      - Identify popular games or dominant genres
      - Highlight key publishers and major platforms
 
-5. **Insights & Recommendations**
+2. **Insights & Recommendations**
    - Identification of factors impacting popularity (ratings, pricing, genres, etc.)
    - Key recommendations formulated for Ubisoft based on data findings
 
